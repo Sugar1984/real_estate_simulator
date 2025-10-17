@@ -9,16 +9,16 @@ from old_apartment_simulator_v1_20251018 import real_estate_sym_base  # クラ�
 st.title("不動産キャッシュフローシミュレーター")
 
 # 📥 ユーザー入力フォーム
-price = st.number_input("物件価格（万円）", value=6200)
-closing_costs = st.number_input("初期費用（万円）", value=200)
+price = st.number_input("物件価格（万円）", value=5000)
+closing_costs = st.number_input("初期費用（万円）不明な場合は、住宅価格*7%", value=200)
 term = st.number_input("返済期間（年）", value=35)
-rate_year = st.number_input("年利（例：0.006）", value=0.006)
+rate_year = st.number_input("金利(%)（例：0.6%）", value=0.6)
 management_fee_month = st.number_input("月額管理費（万円）", value=1.2)
 repair_fund_month = st.number_input("月額修繕積立金（万円）", value=1.0)
-inflation = st.number_input("インフレ率（例：0.02）", value=0.02)
+inflation = st.number_input("インフレ率(%)（例：0.02%）", value=0.02)
 square_meters = st.number_input("面積（㎡）", value=70)
-building_ratio = st.number_input("建屋比率", value=0.33)
-site_ratio = st.number_input("土地比率", value=0.66)
+building_ratio = st.number_input("建屋比率(%)", value=33)
+site_ratio = st.number_input("土地比率(%)", value=66)
 
 # 🚀 実行ボタン
 if st.button("シミュレーション実行"):
