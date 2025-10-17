@@ -6,7 +6,7 @@ subprocess.run(["pip", "install", "numpy-financial"])
 
 from old_apartment_simulator_v1_20251018 import real_estate_sym_base  # クラス定義を別ファイルにしておく
 
-st.markdown("<h2>不動産キャッシュフローシミュレーター</h2>", unsafe_allow_html=True)
+st.markdown("<h2>中古マンション購入キャッシュフローシミュレーター</h2>", unsafe_allow_html=True)
 
 # 📥 ユーザー入力フォーム
 price = st.number_input("物件価格（万円）", value=5000)
@@ -35,6 +35,7 @@ if st.button("シミュレーション実行"):
     st.dataframe(df)
 
     st.line_chart(df[["元本返済額", "金利返済額", "管理費", "修繕費", "トータル支払額"]])
+
 
 
 
